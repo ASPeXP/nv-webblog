@@ -1,5 +1,4 @@
-const UserController =
-require('./controllers/UserController')
+const UserController = require('./controllers/UserController')
 
 module.exports = (app) => {
     /* RESFUL API for users management */
@@ -16,6 +15,6 @@ module.exports = (app) => {
     app.get('/user/:userId', UserController.show )
 
     // get all user
-    app.get ('/users', UserController.index )
+    app.get('/users', UserController.index )
 }
 
