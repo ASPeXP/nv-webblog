@@ -8,6 +8,11 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true }))
 app.use(cors())
+app.use('/assets', express.static('public'))
+app.use('/uploads', express.static('src/public/uploads'))
+
+require('./userPassport')
+
 
 require('./routes')(app)
 
